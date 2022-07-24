@@ -8,8 +8,8 @@ Description des choix faits au long du projet
 Script pour peupler la bdd : 
 
 df = pd.read_csv('top250-00-19.csv')
-
 df.to_sql('top250', conn, if_exists='append', index = False)
+
 utilisation de la methode pandas.DataFrame.to_sql pour stocker les donnees de la dataframe dans une base de donnees
 
 
