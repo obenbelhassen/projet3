@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Position</td>
+            <td>Age</td>
+            <td>Team_from</td>
+            <td>League_from</td>
+            <td>Team_to</td>
+            <td>League_to</td>
+            <td>Season</td>
+            <td>Market_value</td>
+            <td>Transfer_fee</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Name"]}}</td>
+               <td>{{row["Position"]}}</td>
+               <td> {{row["Age"]}}</td>
+               <td>{{row['Team_from']}}</td>	
+               <td>{{row["League_from"]}}</td>
+               <td>{{row["Team_to"]}}</td>
+               <td> {{row["League_to"]}}</td>
+               <td>{{row['Season']}}</td>	
+               <td>{{row["Market_value"]}}</td>
+               <td>{{row["Transfer_fee"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
