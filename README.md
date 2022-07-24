@@ -33,15 +33,19 @@ docker image build . -t my_database:latest
 
 Docker compose :
 creation de network :
+
 docker network create --gateway 172.16.0.1 --subnet 172.16.0.0/24 app_subnet
 
 et on fixe l'adresse ip de l'api dans le docker-compose ipv4_address: 172.16.0.10
 
 utilisation de volumes pour passer la sortie du script utilise pour peupler la base de donnees (my_data.db) vers le container de l'api
 Cote database :
+
   volumes:
             - ./database:/app
+
 cote api :
+
   volumes:
             - .:/app
             
