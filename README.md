@@ -23,6 +23,11 @@ Les routes de l'api :  J'ai utilise des templates html : une pour l'affichage de
 
 /list : lister la totalite de la base de donnees 
 
+Dockerfile: creation des images a partir des fichiers dockerfile
+docker image build . -t my_api:latest
+cd /database
+docker image build . -t my_database:latest
+
 Docker compose :
 creation de network :
 docker network create --gateway 172.16.0.1 --subnet 172.16.0.0/24 app_subnet
