@@ -1,7 +1,7 @@
 # projet3
 
 
-j'ai  choisi la base de donée "top250" disponible sur le site kaggle: https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018. Les donnees sont sous forme de table ce qui justifie le choix de sql pour ces donnees. En fait c'est une base de donnees relationnelle et les donnees sont structures.
+j'ai  choisi la base de donée "top250" disponible sur le site kaggle: https://www.kaggle.com/vardan95ghazaryan/top-250-football-transfers-from-2000-to-2018. Les donnees sont sous forme de table ce qui justifie le choix de sql pour ces donnees. En fait c'est une base de donnees relationnelle et les donnees sont structures. J'ai opte pour utilise sqlite pour gerer la base de donnees dans ce projet.
 
 Description des choix faits au long du projet
 
