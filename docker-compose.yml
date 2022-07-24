@@ -1,0 +1,34 @@
+version: "3.9"
+
+networks:
+  app_subnet:
+    external: true
+    
+
+services:
+       database:
+         image: my_database
+         container_name: my_db
+         networks:
+               - app_subnet 
+         volumes:
+            - ./database:/app
+       api:
+         image: my_api
+         depends_on:
+                - "database"
+         container_name: my_api
+         networks:
+               app_subnet :
+                ipv4_address: 172.16.0.10
+         ports:
+              - "5000:5000"
+              #- target: 5000
+               # published: 5000
+               # protocol: tcp
+               # mode: host
+         volumes:
+            - .:/app
+
+#volumes:
+# static-content:
