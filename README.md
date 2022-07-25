@@ -20,7 +20,7 @@ Les routes de l'api :  J'ai utilise des templates html : une pour l'affichage de
 
 /most_expensive : retourne les informations du joueur avec le transfert le plus cher
 
-/add_player : rajouter les informations d'un joueur a la base de donnees
+/add_player : rajouter les informations d'un joueur a la base de donnees (on peut tester cette route avec le fichier json inclut dans le projet avec l'option -d '@test.json" de la commande curl)
 
 /list : lister la totalite de la base de donnees 
 
@@ -34,7 +34,7 @@ docker image build . -t my_database:latest
 
 Docker compose :
 
-creation de network :
+creation de network a l'exterieur de docker compose:
 
 docker network create --gateway 172.16.0.1 --subnet 172.16.0.0/24 app_subnet
 
@@ -52,4 +52,4 @@ cote api :
   volumes:
             - .:/app
             
-ajout de depends on sur le container de l'api afin que la base donnees soit deja peuplee et accessible par l'api
+ajout de depends on sur le container de l'api afin que la base donnees soit deja peuplee et accessible par l'api au moment du lancement de cette derniere.
